@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 export const Header = () => {
   const [darkMode, setDarkMode] = useState(true);
   const [hidden, setHidden] = useState(JSON.parse(localStorage.getItem("darkMode")) || false);

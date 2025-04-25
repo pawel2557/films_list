@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --breakpoint-other: 81.25rem; /* 1300px */
+}
+
 main {
   max-width: 1280px;
   margin: auto;
