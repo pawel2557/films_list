@@ -2,11 +2,9 @@ import { Link } from "react-router-dom"
 import { Button } from "../components/Button"
 
 import  PageNotFoundImage  from "../assets/images/pagenotfound.png"
-import { useEffect } from "react"
+import { useTitle } from "../hooks/useTitle"
 export const PageNotFound = () => {
-  useEffect(()=>{
-    document.title = `Page Not Found / Films list`;
-  }, []);
+  useTitle("Page Not Found");
   return (
     <main>
       <section className="flex flex-col justify-center px-2">
