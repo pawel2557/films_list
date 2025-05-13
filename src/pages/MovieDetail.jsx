@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import BackupImage from "../assets/images/backup.png"
+import { useTitle } from "../hooks/useTitle";
 export const MovieDetail = () => {
   const params = useParams();
   const [movie, setMovie] = useState({});
@@ -15,6 +16,9 @@ export const MovieDetail = () => {
     }
     fetchMovie();
   }, []);
+  
+   useTitle(`${movie.title}`);
+  
   console.log(movie.genres);
 
   return (
